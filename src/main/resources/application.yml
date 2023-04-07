@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    diver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_example
+    username: root
+    password: mySql
+
+#spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_example
+#spring.datasource.username=root
+#spring.datasource.password=mySql
+#spring.jpa.generate-ddl=true
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql: true
