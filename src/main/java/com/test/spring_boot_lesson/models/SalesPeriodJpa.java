@@ -36,8 +36,7 @@ public class SalesPeriodJpa {
     @Min(value = 0, message = "no be negative")
     private Integer product;
 
-    public SalesPeriodJpa(long id, long price, Date dateFrom, Date dateTo, Integer product) {
-        this.id = id;
+    public SalesPeriodJpa( long price, Date dateFrom, Date dateTo, Integer product) {
         this.price = price;
         this.dateFrom = dateFrom;
         this.dateTo = dateTo;

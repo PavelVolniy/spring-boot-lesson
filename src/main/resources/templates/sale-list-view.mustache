@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales list</title>
+    <style>
+        body{width: 100%;
+            height: 100%;
+            margin: 0;
+            display: table;
+        }
+        h1{
+            display: table;
+           margin-top: 10%;
+           margin-left: auto;
+           margin-right: auto;
+        }
+        form input{
+            margin: 1px;
+        }
+        form{
+            display: table;
+            margin: auto;
+            border: 2px solid gray;
+            padding: 1px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Manager: <i>{{name}}</i></h1>
+<br>
+<form action="/showListSales" style="border: 0px;">
+    <input type="number" name="price" placeholder="price">
+    <input type="date" name="date_from" placeholder="date from">
+    <input type="date" name="date_to" placeholder="date to">
+    <input type="number" name="product" placeholder="product count">
+    <input type="submit" value="add sale">
+</form>
+<br>
+{{#salesList}}
+        <div>{{price}}</div>
+        <div>{{dateFrom}}</div>
+        <div>{{dateTo}}</div>
+        <div>{{product}}</div>
+{{/salesList}}
+</body>
+
+</html>

@@ -47,7 +47,6 @@ public class SalesServiceImpl implements SalesService {
             @Override
             public SalesPeriodJpa mapRow(ResultSet rs, int rowNum) throws SQLException {
                 return new SalesPeriodJpa(
-                        rs.getLong("id"),
                         rs.getLong("price"),
                         rs.getDate("sate_from"),
                         rs.getDate("date_to"),
@@ -63,7 +62,6 @@ public class SalesServiceImpl implements SalesService {
         for (SalesPeriodJpa item : list) System.out.println(item);
         List<SalesPeriodJpa> list1 = template.query("select * from db_example.sales_period",
                 (rs, rowNum) -> new SalesPeriodJpa(
-                        rs.getLong("id"),
                         rs.getLong("price"),
                         rs.getDate("date_from"),
                         rs.getDate("date_to"),
